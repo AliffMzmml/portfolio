@@ -72,7 +72,7 @@ const EvidenceCard: React.FC<{ item: EvidenceItem; index: number }> = ({ item, i
                                 )}
                            </div>
                        ) : currentImageUrl ? (
-                           <img src={currentImageUrl} alt={item.imageAlt} className="w-full h-full object-cover" />
+                           <img src={currentImageUrl} alt={item.imageAlt} className="w-full h-full object-cover" loading="lazy" />
                        ) : (
                            /* Placeholder Photo Frame */
                            <div className="w-full h-full relative group-hover:scale-105 transition-transform duration-700">
@@ -187,11 +187,11 @@ const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose }) => 
         </div>
 
         {/* Main Image */}
-        <motion.div 
+        <motion.div
           layoutId={`image-${project.id}`}
           className="w-full aspect-video rounded-2xl overflow-hidden mb-20 bg-gray-200 shadow-sm"
         >
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+          <img src={project.image} alt={project.title} className="w-full h-full object-cover" loading="lazy" />
         </motion.div>
 
         {/* Challenge & Solution Grid */}
@@ -298,7 +298,7 @@ const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose }) => 
 
         {/* Full Width Image / Mockup with Action Buttons */}
         <div className="w-full aspect-[21/9] bg-gray-100 rounded-2xl mb-20 overflow-hidden relative group">
-             <img src="Images/SCREEN.png" className="w-full h-full object-cover" alt="ATS Redesign Mockup" />
+             <img src="Images/SCREEN.png" className="w-full h-full object-cover" alt="ATS Redesign Mockup" loading="lazy" />
              <div className="absolute inset-0 flex items-center justify-center gap-4">
                  <a
                     href="https://www.figma.com/design/gSwwg43hKFVeJtCCIm9QIC/ATS-REVAMP-MOCKUP?node-id=0-1&t=9mCGLuJ8bPjtjyYn-1"
