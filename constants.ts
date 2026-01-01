@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: "ATS Redesign",
     category: "Product Design / AI",
-    image: "/Images/SCREEN.png",
+    image: "Images/SCREEN.png",
     description: "Redesigning the applicant tracking experience to optimize the 'Clicks-to-Decision' metric for high-volume recruiters.",
     link: "#",
     year: "2025",
@@ -24,38 +24,38 @@ export const PROJECTS: Project[] = [
         title: "The Scannability Problem",
         category: "Problem Evidence",
         imageAlt: "Candidate Row UI Comparison",
-        imageUrl: "/gifs/Namecard New.gif",
-        beforeImageUrl: "/gifs/Namecard Old.gif",
+        imageUrl: "gifs/Namecard New.gif",
+        beforeImageUrl: "gifs/Namecard Old.gif",
         caption: "Transitioning from hidden data to surfacing Age, Location, and Role/Duration upfront to satisfy the recruiter's primary filters."
       },
       {
         title: "AI Smart Ranking",
         category: "Discovery Accelerator",
         imageAlt: "Smart Ranking Activation",
-        imageUrl: "/gifs/SmartRank.gif",
+        imageUrl: "gifs/SmartRank.gif",
         caption: "Moving away from manual sorting. The AI Smart Ranking auto-sorts the list by match score, allowing recruiters to focus on top-tier talent instantly upon activation."
       },
       {
         title: "Document-First Interaction",
         category: "Workflow Optimization",
         imageAlt: "One-click resume overlay",
-        imageUrl: "/gifs/Resume New.gif",
-        beforeImageUrl: "/gifs/Resume Old.gif",
+        imageUrl: "gifs/Resume New.gif",
+        beforeImageUrl: "gifs/Resume Old.gif",
         caption: "The 'Document-First' approach. Clicking a candidate bypasses the profile view to show the resume immediately, honoring the recruiter's need to verify credentials as the source of truth."
       },
       {
         title: "Bulk Select & Move",
         category: "Mass Action",
         imageAlt: "Bulk selection and status change bar",
-        imageUrl: "/gifs/BulkMove.gif",
+        imageUrl: "gifs/BulkMove.gif",
         caption: "Eliminating 'Interaction Cost.' Users can now select multiple candidates to move them through the pipeline in one click, achieving the 'Zero Navigation' goal."
       },
       {
         title: "Trust & Reliability",
         category: "System Evidence",
         imageAlt: "Filter chip bar and blacklist warning",
-        imageUrl: "/gifs/New Filter.gif",
-        beforeImageUrl: "/gifs/Old filter.gif",
+        imageUrl: "gifs/New Filter.gif",
+        beforeImageUrl: "gifs/Old filter.gif",
         caption: "Restoring trust with a persistent Filter Chip Bar."
       }
     ],
@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     id: 2,
     title: "Bus Siswa Mobile App",
     category: "Mobile App Design",
-    image: "/Images/Bus Tracker.png",
+    image: "Images/Bus Tracker.png",
     description: "A self-initiated case study addressing the pain points of campus bus tracking. Designed to help students locate and track campus buses in real-time, reducing wait times and improving daily commute experience.",
     link: "https://www.behance.net/gallery/234733257/UiTM-Bus-Tracker-UIUX-Case-Study",
     year: "2024",
@@ -111,7 +111,7 @@ export const PROJECTS: Project[] = [
     id: 3,
     title: "Hiredly Internship Bank",
     category: "Product Design",
-    image: "/Images/WIP.jpg",
+    image: "Images/WIP.jpg",
     description: "Designing a dedicated internship application page to streamline the student hiring process and improve the internship discovery experience.",
     link: "wip",
     year: "2025",

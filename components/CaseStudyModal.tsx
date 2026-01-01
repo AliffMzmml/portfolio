@@ -298,7 +298,7 @@ const CaseStudyModal: React.FC<CaseStudyModalProps> = ({ project, onClose }) => 
 
         {/* Full Width Image / Mockup with Action Buttons */}
         <div className="w-full aspect-[21/9] bg-gray-100 rounded-2xl mb-20 overflow-hidden relative group">
-             <img src="/Images/SCREEN.png" className="w-full h-full object-cover" alt="ATS Redesign Mockup" />
+             <img src="Images/SCREEN.png" className="w-full h-full object-cover" alt="ATS Redesign Mockup" />
              <div className="absolute inset-0 flex items-center justify-center gap-4">
                  <a
                     href="https://www.figma.com/design/gSwwg43hKFVeJtCCIm9QIC/ATS-REVAMP-MOCKUP?node-id=0-1&t=9mCGLuJ8bPjtjyYn-1"
