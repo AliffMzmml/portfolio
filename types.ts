@@ -22,6 +22,17 @@ export interface EvidenceItem {
   beforeVideoUrl?: string;
 }
 
+export interface ImpactMetric {
+  value: string;
+  label: string;
+  description: string;
+}
+
+export interface Impact {
+  description: string;
+  metrics?: ImpactMetric[];
+}
+
 export interface Project {
   id: number;
   title: string;
@@ -36,6 +47,7 @@ export interface Project {
   solution: string;
   process?: ProcessPhase[];
   evidence?: EvidenceItem[];
+  impact?: Impact;
 }
 
 export interface NavItem {

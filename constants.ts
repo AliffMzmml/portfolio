@@ -17,48 +17,68 @@ export const PROJECTS: Project[] = [
     year: "2025",
     client: "HIREDLY",
     role: "UI/UX Intern",
-    challenge: "Recruiters were suffering from 'Workflow Stagnation' due to ambiguous filters and high click costs. The existing system forced a high-rejection mental model that slowed down screening time by 40%.",
-    solution: "We introduced a 'Zero Navigation' dashboard with AI Smart Ranking. By surfacing critical data fields (Age, Location, Position) and enabling Bulk Actions, we reduced screening time by 60%.",
+    challenge: "High-volume recruiters at Hiredly were experiencing significant workflow friction. Critical candidate information was buried behind multiple clicks, forcing them to open individual profiles just to check basic qualifications. The ambiguous filtering system created distrust, with recruiters unsure if their filters were even working. These pain points created a frustrating 'click-heavy' experience that slowed screening by 40%.",
+    solution: "We redesigned the entire screening workflow around a 'Zero Navigation' philosophy. Critical data fields (Age, Location, Position) were surfaced directly in the candidate list, eliminating unnecessary clicks. AI Smart Ranking automatically prioritizes top matches, while Document-First interaction lets recruiters verify credentials instantly. Bulk actions enable pipeline management at scale, and a persistent Filter Chip Bar restores system transparency.",
     evidence: [
       {
-        title: "The Scannability Problem",
+        title: "Hidden Information Slows Decisions",
         category: "Problem Evidence",
-        imageAlt: "Candidate Row UI Comparison",
+        imageAlt: "Candidate Row UI Comparison - Before and After",
         imageUrl: "gifs/Namecard New.gif",
         beforeImageUrl: "gifs/Namecard Old.gif",
-        caption: "Transitioning from hidden data to surfacing Age, Location, and Role/Duration upfront to satisfy the recruiter's primary filters."
+        caption: "Previously, recruiters had to click into each profile to see Age, Location, and Position—their primary screening criteria. The redesigned candidate row surfaces this critical information upfront, enabling instant visual scanning without navigation."
+      },
+      {
+        title: "Filter Ambiguity Creates Distrust",
+        category: "Problem Evidence",
+        imageAlt: "Filter interface comparison showing old vs new filter design",
+        imageUrl: "gifs/New Filter.gif",
+        beforeImageUrl: "gifs/Old filter.gif",
+        caption: "The old filter system provided no visual confirmation of active filters, leading recruiters to question whether their selections were actually applied. The new persistent Filter Chip Bar makes all active filters visible at a glance, restoring system trust."
       },
       {
         title: "AI Smart Ranking",
-        category: "Discovery Accelerator",
-        imageAlt: "Smart Ranking Activation",
+        category: "Solution Feature",
+        imageAlt: "AI Smart Ranking activation showing candidate list re-sorting",
         imageUrl: "gifs/SmartRank.gif",
-        caption: "Moving away from manual sorting. The AI Smart Ranking auto-sorts the list by match score, allowing recruiters to focus on top-tier talent instantly upon activation."
+        caption: "Instead of manual sorting, recruiters can activate AI Smart Ranking to automatically prioritize candidates by match score. This shifts focus from searching to evaluating top-tier talent first."
       },
       {
         title: "Document-First Interaction",
-        category: "Workflow Optimization",
-        imageAlt: "One-click resume overlay",
+        category: "Solution Feature",
+        imageAlt: "One-click resume overlay - Before and After workflow",
         imageUrl: "gifs/Resume New.gif",
         beforeImageUrl: "gifs/Resume Old.gif",
-        caption: "The 'Document-First' approach. Clicking a candidate bypasses the profile view to show the resume immediately, honoring the recruiter's need to verify credentials as the source of truth."
+        caption: "The new interaction model recognizes that resumes are the source of truth. Clicking a candidate now shows their resume immediately in an overlay, bypassing the profile view entirely and reducing clicks-to-decision."
       },
       {
         title: "Bulk Select & Move",
-        category: "Mass Action",
-        imageAlt: "Bulk selection and status change bar",
+        category: "Solution Feature",
+        imageAlt: "Bulk selection interface with pipeline status bar",
         imageUrl: "gifs/BulkMove.gif",
-        caption: "Eliminating 'Interaction Cost.' Users can now select multiple candidates to move them through the pipeline in one click, achieving the 'Zero Navigation' goal."
-      },
-      {
-        title: "Trust & Reliability",
-        category: "System Evidence",
-        imageAlt: "Filter chip bar and blacklist warning",
-        imageUrl: "gifs/New Filter.gif",
-        beforeImageUrl: "gifs/Old filter.gif",
-        caption: "Restoring trust with a persistent Filter Chip Bar."
+        caption: "High-volume screening requires batch operations. Recruiters can now select multiple candidates and move them through the pipeline in one action, achieving true zero-navigation workflow for mass decisions."
       }
     ],
+    impact: {
+      description: "The redesigned ATS significantly improved recruiter efficiency and satisfaction, with measurable gains in screening speed and workflow confidence.",
+      metrics: [
+        {
+          value: "60%",
+          label: "Faster Screening",
+          description: "Reduction in time-to-decision per candidate"
+        },
+        {
+          value: "75%",
+          label: "Fewer Clicks",
+          description: "Reduction in clicks needed for common tasks"
+        },
+        {
+          value: "100%",
+          label: "Filter Transparency",
+          description: "Recruiters now trust the filtering system"
+        }
+      ]
+    },
     process: [
       {
         title: "Discovery & Insights",

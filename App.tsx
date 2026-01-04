@@ -72,6 +72,28 @@ const App: React.FC = () => {
     setSelectedProject(null);
   };
 
+  const handleNextProject = () => {
+    if (!selectedProject) return;
+
+    const currentIndex = PROJECTS.findIndex(p => p.id === selectedProject.id);
+    const nextIndex = (currentIndex + 1) % PROJECTS.length;
+    const nextProject = PROJECTS[nextIndex];
+
+    // Handle work in progress projects
+    if (nextProject.link === 'wip') {
+      alert("📝 Case Study in Progress\n\nI'm currently compiling the case study for this project! Check back soon to see the full design process and insights. Thanks for your patience! 😊");
+      return;
+    }
+
+    // If project has an external link, redirect to it instead of opening modal
+    if (nextProject.link && nextProject.link !== '#') {
+      window.open(nextProject.link, '_blank', 'noopener,noreferrer');
+      handleCloseModal();
+    } else {
+      setSelectedProject(nextProject);
+    }
+  };
+
   return (
     <div className="relative min-h-screen bg-[#FDFBF7] text-gray-900 selection:bg-orange-200 selection:text-orange-900">
       
@@ -131,9 +153,10 @@ const App: React.FC = () => {
       {/* Case Study Modal Overlay */}
       <AnimatePresence>
         {selectedProject && (
-          <CaseStudyModal 
-            project={selectedProject} 
-            onClose={handleCloseModal} 
+          <CaseStudyModal
+            project={selectedProject}
+            onClose={handleCloseModal}
+            onNextProject={handleNextProject}
           />
         )}
       </AnimatePresence>
