@@ -224,7 +224,7 @@ function Frame1() {
 
 function Frame4() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] h-full items-center lg:items-start justify-end pl-0 lg:pl-[60px] pr-0 py-[60px] relative shrink-0 w-full lg:w-[432px]">
+    <div className="content-stretch flex flex-col gap-[40px] h-full items-center lg:items-start justify-end px-[40px] md:px-[60px] lg:px-0 lg:pl-[60px] py-[60px] relative shrink-0 w-full lg:w-[432px]">
       <Btn1 />
       <Frame1 />
     </div>
