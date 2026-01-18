@@ -351,8 +351,42 @@ function Frame9() {
 }
 
 function Btn6() {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const springConfig = { stiffness: 300, damping: 20 };
+  const rotateX = useSpring(useTransform(y, [-20, 20], [5, -5]), springConfig);
+  const rotateY = useSpring(useTransform(x, [-20, 20], [-5, 5]), springConfig);
+  const translateX = useSpring(useTransform(x, [-20, 20], [-3, 3]), springConfig);
+  const translateY = useSpring(useTransform(y, [-20, 20], [-3, 3]), springConfig);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    x.set(e.clientX - centerX);
+    y.set(e.clientY - centerY);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
   return (
-    <div className="h-[46px] relative rounded-[32px] shrink-0" data-name="btn">
+    <motion.div
+      className="h-[46px] relative rounded-[32px] shrink-0 cursor-pointer"
+      data-name="btn"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        rotateX,
+        rotateY,
+        x: translateX,
+        y: translateY,
+        transformStyle: "preserve-3d",
+      }}
+    >
       <div className="content-stretch flex gap-[40px] h-full items-center justify-center overflow-clip px-[16px] py-[12px] relative rounded-[inherit]">
         <LiquidEffect className="inset-[-6.5px_-21px]" />
         <ul className="block css-g0mm18  font-bold leading-[0] relative shrink-0 text-[#1d1d1f] text-[15px]">
@@ -362,7 +396,7 @@ function Btn6() {
         </ul>
       </div>
       <div aria-hidden="true" className="absolute border-[1.2px] border-[rgba(255,255,255,0.52)] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[0px_12px_16px_0px_rgba(0,0,0,0.12)]" />
-    </div>
+    </motion.div>
   );
 }
 
