@@ -10,6 +10,7 @@ interface SkillData {
 }
 
 const skillsData: SkillData[] = [
+  { name: "User Research", category: "Research", percentage: 80 },
   { name: "Wireframing", category: "Design", percentage: 65 },
   { name: "Prototyping", category: "Design", percentage: 75 },
   { name: "Figma", category: "Tools", percentage: 85 },
@@ -184,58 +185,25 @@ export function AboutMeSection() {
                 className="content-stretch flex flex-col gap-[32px] items-start overflow-hidden relative shrink-0 w-full"
               >
                 <div className="gap-[24px] grid grid-cols-1 md:grid-cols-2 h-auto relative shrink-0 w-full">
-
-                  {/* User Research */}
-                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
-                    <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">User Research</p>
-                        </div>
-                      </div>
-                      <div className="h-[19.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Research</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
-                      <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pr-[20%] py-0 relative size-full">
-                          <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Wireframing */}
-                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
-                    <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      {/* Skills List */}
-                      <div className="flex flex-col gap-[8px] w-full">
-                        {skillsData.map((skill, index) => (
-                          <SkillProgressBar
-                            key={index}
-                            name={skill.name}
-                            category={skill.category}
-                            percentage={skill.percentage}
-                            isExpanded={isSkillsExpanded}
-                          />
-                        ))}
-                      </div>
-
-                    </div>
-
-                    {/* Bottom Text */}
-                    <div className="content-stretch flex flex-col h-auto items-start pb-0 pt-[25px] px-0 relative shrink-0 w-full">
-                      <div aria-hidden="true" className="absolute border-[rgba(29,29,31,0.2)] border-solid border-t inset-0 pointer-events-none" />
-                      <div className="h-auto relative shrink-0 w-full text-center">
-                        <p className="css-ew64yg font-light leading-[24px] text-[#fafafa] text-[15px]">Constantly learning and evolving with the latest design tools and methodologies to deliver exceptional user experiences.</p>
-                      </div>
-                    </div>
-                  </motion.div>
+                  {skillsData.map((skill, index) => (
+                    <SkillProgressBar
+                      key={index}
+                      name={skill.name}
+                      category={skill.category}
+                      percentage={skill.percentage}
+                      isExpanded={isSkillsExpanded}
+                    />
+                  ))}
                 </div>
 
+                {/* Bottom Text */}
+                <div className="content-stretch flex flex-col h-auto items-start pb-0 pt-[25px] px-0 relative shrink-0 w-full">
+                  <div aria-hidden="true" className="absolute border-[rgba(29,29,31,0.2)] border-solid border-t inset-0 pointer-events-none" />
+                  <div className="h-auto relative shrink-0 w-full text-center">
+                    <p className="css-ew64yg font-light leading-[24px] text-[#fafafa] text-[15px]">Constantly learning and evolving with the latest design tools and methodologies to deliver exceptional user experiences.</p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
           <div aria-hidden="true" className="absolute border-[1.2px] border-[rgba(255,255,255,0.52)] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[0px_12px_16px_0px_rgba(0,0,0,0.12)]" />
