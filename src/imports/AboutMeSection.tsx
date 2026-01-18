@@ -115,7 +115,7 @@ export function AboutMeSection() {
                 <div className="content-stretch flex flex-col gap-[40px] items-start lg:pl-[80px] lg:pr-[40px] py-0 relative size-full text-[#fafafa]">
                   <p className="css-4hzbpn font-bold leading-[normal] relative shrink-0 text-[32px] w-full">EDUCATION</p>
 
-                  <div className="content-stretch flex flex-[1_0_0] flex-col font-light items-center justify-between leading-[0] min-h-px min-w-px relative text-[15px] text-justify w-full gap-[20px] lg:gap-0">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col font-light items-center justify-center leading-[0] min-h-px min-w-px relative text-[15px] text-justify w-full gap-[20px]">
                     {/* Bachelor */}
                     <div className="relative shrink-0 w-full">
                       <p className="css-4hzbpn font-semibold leading-[22px] mb-0">Bachelor of New Media Communication (Hons.)</p>
