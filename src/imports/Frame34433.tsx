@@ -337,19 +337,14 @@ function Btn6() {
 function Frame13() {
   return (
     <div className="relative w-full overflow-hidden">
-      {/* Left Fade Overlay */}
+      {/* Scrolling Container with Fade Mask - Padding added to inner container to include hover states within mask */}
       <div
-        className="absolute left-0 top-0 bottom-0 w-[150px] z-10 pointer-events-none"
-        style={{ background: 'linear-gradient(to right, #D8D7D7 0%, transparent 100%)' }}
-      />
-      {/* Right Fade Overlay */}
-      <div
-        className="absolute right-0 top-0 bottom-0 w-[150px] z-10 pointer-events-none"
-        style={{ background: 'linear-gradient(to left, #D8D7D7 0%, transparent 100%)' }}
-      />
-
-      {/* Scrolling Container - no mask, overlays handle fade */}
-      <div className="flex gap-[30px] items-center py-[20px]">
+        className="flex gap-[30px] items-center py-[20px]"
+        style={{
+          maskImage: 'linear-gradient(to right, transparent 0%, black 100px, black calc(100% - 100px), transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 100px, black calc(100% - 100px), transparent 100%)'
+        }}
+      >
         <style>{`
           @keyframes scroll-horizontal {
             0% { transform: translateX(0); }
