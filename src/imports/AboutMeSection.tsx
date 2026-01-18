@@ -101,10 +101,9 @@ export function AboutMeSection() {
                 </div>
 
                 {/* Biography Text */}
-                <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                  <div className="font-light leading-[22px] relative shrink-0 text-[#fafafa] text-[15px] text-justify w-full lg:w-[809px]">
+                <div className="content-stretch flex flex-[1_0_0] items-center justify-center relative w-full">
+                  <div className="font-light leading-[22px] relative flex flex-col justify-between h-full shrink-0 text-[#fafafa] text-[15px] text-justify w-full lg:w-[809px]">
                     <p className="css-4hzbpn mb-0">Who am I? I fell in love with storytelling long before I knew what UI/UX was. It started with photography, an attempt to translate my emotions into images, to make people feel something without saying a word. I watched films not to escape, but to study: how does this scene make me feel? Why did that cut hit so hard? I applied those lessons to my own photographs, treating every shot like a frame in a story.</p>
-                    <p className="css-4hzbpn mb-0">&nbsp;</p>
                     <p className="css-4hzbpn">{`But over time, my focus shifted. I stopped asking how can I express myself? and started asking how can I understand others? That question led me to UI/UX design. Now I channel the same obsession into research and interfaces, building things that aren't about me, but about the people who use them. I welcome feedback because it teaches me. And I believe, deeply, that effort carves the path. If I keep going, I'll get there.`}</p>
                   </div>
                 </div>
