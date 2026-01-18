@@ -185,8 +185,8 @@ function Frame3() {
 
 function Frame() {
   return (
-    <div className="absolute content-stretch flex items-center justify-center left-1/2 px-[60px] py-[10px] top-[69px] translate-x-[-50%] w-[1440px]">
-      <div className="css-g0mm18 flex flex-col  font-bold justify-center leading-[0] relative shrink-0 text-[#1d1d1f] text-[185.395px]">
+    <div className="absolute content-stretch flex items-center justify-center left-1/2 px-[20px] md:px-[60px] py-[10px] top-[69px] translate-x-[-50%] w-full max-w-[1440px]">
+      <div className="css-g0mm18 flex flex-col font-bold justify-center leading-[0] relative shrink-0 text-[#1d1d1f] text-[60px] md:text-[100px] lg:text-[185.395px]">
         <p className="css-ew64yg leading-[normal]">{`ALIFF  MZMML`}</p>
       </div>
     </div>
@@ -224,7 +224,7 @@ function Frame1() {
 
 function Frame4() {
   return (
-    <div className="content-stretch flex flex-col gap-[40px] h-full items-start justify-end pl-[60px] pr-0 py-[60px] relative shrink-0 w-[432px]">
+    <div className="content-stretch flex flex-col gap-[40px] h-full items-center lg:items-start justify-end pl-0 lg:pl-[60px] pr-0 py-[60px] relative shrink-0 w-full lg:w-[432px]">
       <Btn1 />
       <Frame1 />
     </div>
@@ -233,8 +233,8 @@ function Frame4() {
 
 function Frame7() {
   return (
-    <div className="col-1 content-stretch flex items-center mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0px] mask-size-[732px_771px] ml-0 mt-0 relative row-1" style={{ maskImage: `url('${imgFrame34427}')` }}>
-      <div className="h-[770px] relative shrink-0 w-[732px]" data-name="ALIFF 2">
+    <div className="col-1 content-stretch flex items-center mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[0px_0px] mask-size-contain ml-0 mt-0 relative row-1 w-full max-w-[500px] lg:max-w-[732px]" style={{ maskImage: `url('${imgFrame34427}')`, maskSize: '100% 100%' }}>
+      <div className="h-[500px] lg:h-[770px] relative shrink-0 w-full aspect-[732/770]" data-name="ALIFF 2">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <img loading="lazy" alt="" className="absolute inset-0 w-full h-full object-cover" src={imgAliff2} />
         </div>
@@ -303,12 +303,14 @@ function Frame6() {
 
 function Frame9() {
   return (
-    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
-      <div className="flex flex-row items-center self-stretch">
+    <div className="content-stretch flex flex-col-reverse lg:flex-row items-center justify-between relative shrink-0 w-full">
+      <div className="flex flex-row items-center self-stretch w-full lg:w-auto justify-center lg:justify-start">
         <Frame4 />
       </div>
       <MaskGroup />
-      <Frame6 />
+      <div className="hidden lg:block">
+        <Frame6 />
+      </div>
     </div>
   );
 }
@@ -414,7 +416,7 @@ function Frame13() {
 
 function Frame8() {
   return (
-    <div id="projects-section" className="content-stretch flex flex-col gap-[20px] items-start p-[60px] relative shrink-0 w-[1440px]">
+    <div id="projects-section" className="content-stretch flex flex-col gap-[20px] items-start p-[20px] md:p-[60px] relative shrink-0 w-full max-w-[1440px] mx-auto">
       <Btn6 />
       <Frame13 />
     </div>
@@ -428,7 +430,7 @@ function ContactMeSection() {
 
 
   return (
-    <div id="contact-me-section" className="content-stretch flex flex-col items-center p-[60px] relative w-full bg-[#1d1d1f]">
+    <div id="contact-me-section" className="content-stretch flex flex-col items-center p-[20px] md:p-[60px] relative w-full bg-[#1d1d1f]">
       <style>{`
         @keyframes pulse {
           0%, 100% {
@@ -475,11 +477,11 @@ function ContactMeSection() {
       </div>
 
       {/* Main Content Grid */}
-      <div className="grid grid-cols-2 gap-[40px] max-w-[1320px] w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] max-w-[1320px] w-full">
 
         {/* Download Resume Card */}
         <a
-          href="/resume.pdf"
+          href="resume.pdf"
           download="Aliff_Muzammil_Resume.pdf"
           className="contact-card rounded-[24px] p-[40px] cursor-pointer block text-decoration-none"
           onMouseEnter={() => setHoveredCard('resume')}

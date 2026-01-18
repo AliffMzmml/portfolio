@@ -5,27 +5,27 @@ import { motion, AnimatePresence } from "motion/react";
 export function AboutMeSection() {
   const [isSkillsExpanded, setIsSkillsExpanded] = useState(false);
   return (
-    <div id="about-me-section" className="content-stretch flex flex-col items-start p-[60px] relative w-full">
-      <div className="relative rounded-[32px] shrink-0 w-[1320px]" data-name="btn">
-        <div className="content-stretch flex gap-[10px] items-center justify-center overflow-clip p-[40px] relative rounded-[inherit] w-full">
+    <div id="about-me-section" className="content-stretch flex flex-col items-start p-[20px] md:p-[40px] lg:p-[60px] relative w-full">
+      <div className="relative rounded-[32px] shrink-0 w-full max-w-[1320px] mx-auto" data-name="btn">
+        <div className="content-stretch flex gap-[10px] items-center justify-center overflow-clip p-[20px] md:p-[40px] relative rounded-[inherit] w-full">
           {/* Liquid Effect */}
           <div className="absolute backdrop-blur-[1.5px] bg-[rgba(255,255,255,0.12)] inset-[-6.5px_-21px]" data-name="liquid-effect" />
 
           {/* Main Content */}
-          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[40px] items-start min-h-px min-w-px relative">
+          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[40px] items-start min-h-px min-w-px relative w-full">
 
             {/* Top Section - Biography and Education */}
-            <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
+            <div className="content-stretch flex flex-col lg:flex-row items-center lg:items-start justify-between relative shrink-0 w-full gap-[40px] lg:gap-0">
 
               {/* Left Side - Biography */}
-              <div className="content-stretch flex flex-col gap-[40px] items-start relative rounded-[16px] shrink-0">
+              <div className="content-stretch flex flex-col gap-[40px] items-start relative rounded-[16px] shrink-0 w-full lg:w-auto lg:max-w-[70%]">
                 {/* WHO IS ALIFF? Header */}
-                <div className="content-stretch flex gap-[16px] h-[160px] items-center relative shrink-0 w-[357px]">
+                <div className="content-stretch flex gap-[16px] h-auto lg:h-[160px] items-center relative shrink-0 w-full lg:w-[357px]">
                   <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative">
-                    <p className="css-4hzbpn  font-bold leading-[normal] relative shrink-0 text-[#fafafa] text-[64px] w-[233px]">WHO IS ALIFF</p>
+                    <p className="css-4hzbpn font-bold leading-[normal] relative shrink-0 text-[#fafafa] text-[40px] md:text-[64px] w-full lg:w-[233px]">WHO IS ALIFF</p>
                   </div>
-                  <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-[108px]">
-                    <div className="flex flex-col  font-bold justify-center leading-[0] relative shrink-0 text-[#fafafa] text-[180px] w-full">
+                  <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-[80px] md:w-[108px]">
+                    <div className="flex flex-col font-bold justify-center leading-[0] relative shrink-0 text-[#fafafa] text-[120px] md:text-[180px] w-full">
                       <p className="css-4hzbpn leading-[normal]">?</p>
                     </div>
                   </div>
@@ -33,7 +33,7 @@ export function AboutMeSection() {
 
                 {/* Biography Text */}
                 <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                  <div className=" font-light leading-[22px] relative shrink-0 text-[#fafafa] text-[15px] text-justify w-[809px]">
+                  <div className="font-light leading-[22px] relative shrink-0 text-[#fafafa] text-[15px] text-justify w-full lg:w-[809px]">
                     <p className="css-4hzbpn mb-0">Who am I? I fell in love with storytelling long before I knew what UI/UX was. It started with photography, an attempt to translate my emotions into images, to make people feel something without saying a word. I watched films not to escape, but to study: how does this scene make me feel? Why did that cut hit so hard? I applied those lessons to my own photographs, treating every shot like a frame in a story.</p>
                     <p className="css-4hzbpn mb-0">&nbsp;</p>
                     <p className="css-4hzbpn">{`But over time, my focus shifted. I stopped asking how can I express myself? and started asking how can I understand others? That question led me to UI/UX design. Now I channel the same obsession into research and interfaces, building things that aren't about me, but about the people who use them. I welcome feedback because it teaches me. And I believe, deeply, that effort carves the path. If I keep going, I'll get there.`}</p>
@@ -42,14 +42,14 @@ export function AboutMeSection() {
               </div>
 
               {/* Right Side - Education */}
-              <div className="flex-[1_0_0] h-[442px] min-h-px min-w-px relative rounded-[16px]">
-                <div className="content-stretch flex flex-col gap-[40px] items-start pl-[80px] pr-[40px] py-0 relative size-full text-[#fafafa]">
-                  <p className="css-4hzbpn  font-bold leading-[normal] relative shrink-0 text-[32px] w-full">EDUCATION</p>
+              <div className="flex-[1_0_0] h-auto min-h-px min-w-px relative rounded-[16px] w-full lg:w-auto">
+                <div className="content-stretch flex flex-col gap-[40px] items-start lg:pl-[80px] lg:pr-[40px] py-0 relative size-full text-[#fafafa]">
+                  <p className="css-4hzbpn font-bold leading-[normal] relative shrink-0 text-[32px] w-full">EDUCATION</p>
 
-                  <div className="content-stretch flex flex-[1_0_0] flex-col  font-light items-center justify-between leading-[0] min-h-px min-w-px relative text-[15px] text-justify w-full">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col font-light items-center justify-between leading-[0] min-h-px min-w-px relative text-[15px] text-justify w-full gap-[20px] lg:gap-0">
                     {/* Bachelor */}
                     <div className="relative shrink-0 w-full">
-                      <p className="css-4hzbpn  font-semibold leading-[22px] mb-0">Bachelor of New Media Communication (Hons.)</p>
+                      <p className="css-4hzbpn font-semibold leading-[22px] mb-0">Bachelor of New Media Communication (Hons.)</p>
                       <p className="css-4hzbpn leading-[22px] mb-0">Universiti Teknologi MARA (UiTM) Shah Alam</p>
                       <ul>
                         <li className="css-4hzbpn list-disc ms-[22.5px]">
@@ -60,7 +60,7 @@ export function AboutMeSection() {
 
                     {/* Udemy */}
                     <div className="relative shrink-0 w-full">
-                      <p className="css-4hzbpn  font-semibold leading-[22px] mb-0">Udemy Certification</p>
+                      <p className="css-4hzbpn font-semibold leading-[22px] mb-0">Udemy Certification</p>
                       <ul>
                         <li className="css-4hzbpn list-disc ms-[22.5px]">
                           <span className="leading-[22px]">{`Complete Web & Mobile Designer: UI/UX, Figma`}</span>
@@ -70,7 +70,7 @@ export function AboutMeSection() {
 
                     {/* Diploma */}
                     <div className="relative shrink-0 w-full">
-                      <p className="css-4hzbpn  font-semibold leading-[22px] mb-0">Diploma in New Media Communication</p>
+                      <p className="css-4hzbpn font-semibold leading-[22px] mb-0">Diploma in New Media Communication</p>
                       <p className="css-4hzbpn leading-[22px] mb-0">Universiti Teknologi MARA (UiTM) Alor Gajah</p>
                       <ul>
                         <li className="css-4hzbpn list-disc ms-[22.5px]">
