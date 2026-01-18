@@ -115,25 +115,25 @@ export function AboutMeSection() {
                 transition={{ duration: 0.3 }}
                 className="content-stretch flex flex-col gap-[32px] items-start overflow-hidden relative shrink-0 w-full"
               >
-                <div className="gap-[24px] grid grid-cols-[repeat(2,_minmax(0,_1fr))] grid-rows-[repeat(4,_minmax(0,_1fr))] h-[226px] relative shrink-0 w-full">
+                <div className="gap-[24px] grid grid-cols-1 md:grid-cols-2 h-auto relative shrink-0 w-full">
 
                   {/* User Research */}
-                  <div className="col-[1] content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative row-[1] self-stretch shrink-0">
+                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
                     <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-[117px]">
+                      <div className="h-[22.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-semibold leading-[22.5px] left-0 text-[#fafafa] text-[15px] top-[0.5px]">User Research</p>
+                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">User Research</p>
                         </div>
                       </div>
-                      <div className="h-[19.5px] relative shrink-0 w-[62.406px]">
+                      <div className="h-[19.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-normal leading-[19.5px] left-0 text-[13px] text-[rgba(250,250,250,0.6)] top-[-0.5px]">Research</p>
+                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Research</p>
                         </div>
                       </div>
                     </div>
                     <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
                       <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pl-0 pr-[30.352px] py-0 relative size-full">
+                        <div className="content-stretch flex flex-col items-start pr-[20%] py-0 relative size-full">
                           <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
                         </div>
                       </div>
@@ -141,22 +141,22 @@ export function AboutMeSection() {
                   </div>
 
                   {/* Wireframing */}
-                  <div className="col-[2] content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative row-[1] self-stretch shrink-0">
+                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
                     <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-[99px]">
+                      <div className="h-[22.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-semibold leading-[22.5px] left-0 text-[#fafafa] text-[15px] top-[0.5px]">Wireframing</p>
+                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">Wireframing</p>
                         </div>
                       </div>
-                      <div className="h-[19.5px] relative shrink-0 w-[46.805px]">
+                      <div className="h-[19.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-normal leading-[19.5px] left-0 text-[13px] text-[rgba(250,250,250,0.6)] top-[-0.5px]">Design</p>
+                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Design</p>
                         </div>
                       </div>
                     </div>
                     <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
                       <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pl-0 pr-[60.703px] py-0 relative size-full">
+                        <div className="content-stretch flex flex-col items-start pr-[35%] py-0 relative size-full">
                           <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
                         </div>
                       </div>
@@ -164,22 +164,22 @@ export function AboutMeSection() {
                   </div>
 
                   {/* Prototyping */}
-                  <div className="col-[1] content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative row-[2] self-stretch shrink-0">
+                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
                     <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-[99px]">
+                      <div className="h-[22.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-semibold leading-[22.5px] left-0 text-[#fafafa] text-[15px] top-[0.5px]">Prototyping</p>
+                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">Prototyping</p>
                         </div>
                       </div>
-                      <div className="h-[19.5px] relative shrink-0 w-[46.805px]">
+                      <div className="h-[19.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-normal leading-[19.5px] left-0 text-[13px] text-[rgba(250,250,250,0.6)] top-[-0.5px]">Design</p>
+                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Design</p>
                         </div>
                       </div>
                     </div>
                     <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
                       <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pl-0 pr-[48.563px] py-0 relative size-full">
+                        <div className="content-stretch flex flex-col items-start pr-[25%] py-0 relative size-full">
                           <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
                         </div>
                       </div>
@@ -187,22 +187,22 @@ export function AboutMeSection() {
                   </div>
 
                   {/* Figma */}
-                  <div className="col-[2] content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative row-[2] self-stretch shrink-0">
+                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
                     <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-[45px]">
+                      <div className="h-[22.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-semibold leading-[22.5px] left-0 text-[#fafafa] text-[15px] top-[0.5px]">Figma</p>
+                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">Figma</p>
                         </div>
                       </div>
-                      <div className="h-[19.5px] relative shrink-0 w-[39px]">
+                      <div className="h-[19.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-normal leading-[19.5px] left-0 text-[13px] text-[rgba(250,250,250,0.6)] top-[-0.5px]">Tools</p>
+                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Tools</p>
                         </div>
                       </div>
                     </div>
                     <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
                       <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pl-0 pr-[30.352px] py-0 relative size-full">
+                        <div className="content-stretch flex flex-col items-start pr-[15%] py-0 relative size-full">
                           <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
                         </div>
                       </div>
@@ -210,22 +210,22 @@ export function AboutMeSection() {
                   </div>
 
                   {/* UI Design */}
-                  <div className="col-[1] content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative row-[3] self-stretch shrink-0">
+                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
                     <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-[81px]">
+                      <div className="h-[22.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-semibold leading-[22.5px] left-0 text-[#fafafa] text-[15px] top-[0.5px]">UI Design</p>
+                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">UI Design</p>
                         </div>
                       </div>
-                      <div className="h-[19.5px] relative shrink-0 w-[46.805px]">
+                      <div className="h-[19.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-normal leading-[19.5px] left-0 text-[13px] text-[rgba(250,250,250,0.6)] top-[-0.5px]">Design</p>
+                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Design</p>
                         </div>
                       </div>
                     </div>
                     <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
                       <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pl-0 pr-[42.492px] py-0 relative size-full">
+                        <div className="content-stretch flex flex-col items-start pr-[22%] py-0 relative size-full">
                           <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
                         </div>
                       </div>
@@ -233,22 +233,22 @@ export function AboutMeSection() {
                   </div>
 
                   {/* UX Strategy */}
-                  <div className="col-[2] content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative row-[3] self-stretch shrink-0">
+                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
                     <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-[99px]">
+                      <div className="h-[22.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-semibold leading-[22.5px] left-0 text-[#fafafa] text-[15px] top-[0.5px]">UX Strategy</p>
+                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">UX Strategy</p>
                         </div>
                       </div>
-                      <div className="h-[19.5px] relative shrink-0 w-[62.406px]">
+                      <div className="h-[19.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-normal leading-[19.5px] left-0 text-[13px] text-[rgba(250,250,250,0.6)] top-[-0.5px]">Strategy</p>
+                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Strategy</p>
                         </div>
                       </div>
                     </div>
                     <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
                       <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pl-0 pr-[72.844px] py-0 relative size-full">
+                        <div className="content-stretch flex flex-col items-start pr-[40%] py-0 relative size-full">
                           <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
                         </div>
                       </div>
@@ -256,22 +256,22 @@ export function AboutMeSection() {
                   </div>
 
                   {/* Usability Testing */}
-                  <div className="col-[1] content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative row-[4] self-stretch shrink-0">
+                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
                     <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-[153px]">
+                      <div className="h-[22.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-semibold leading-[22.5px] left-0 text-[#fafafa] text-[15px] top-[0.5px]">Usability Testing</p>
+                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">Usability Testing</p>
                         </div>
                       </div>
-                      <div className="h-[19.5px] relative shrink-0 w-[62.406px]">
+                      <div className="h-[19.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-normal leading-[19.5px] left-0 text-[13px] text-[rgba(250,250,250,0.6)] top-[-0.5px]">Research</p>
+                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Research</p>
                         </div>
                       </div>
                     </div>
                     <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
                       <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pl-0 pr-[60.703px] py-0 relative size-full">
+                        <div className="content-stretch flex flex-col items-start pr-[30%] py-0 relative size-full">
                           <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
                         </div>
                       </div>
@@ -279,22 +279,22 @@ export function AboutMeSection() {
                   </div>
 
                   {/* Adobe XD */}
-                  <div className="col-[2] content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative row-[4] self-stretch shrink-0">
+                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
                     <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-[72px]">
+                      <div className="h-[22.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-semibold leading-[22.5px] left-0 text-[#fafafa] text-[15px] top-[0.5px]">Adobe XD</p>
+                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">Adobe XD</p>
                         </div>
                       </div>
-                      <div className="h-[19.5px] relative shrink-0 w-[39px]">
+                      <div className="h-[19.5px] relative shrink-0 w-auto">
                         <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="absolute css-ew64yg  font-normal leading-[19.5px] left-0 text-[13px] text-[rgba(250,250,250,0.6)] top-[-0.5px]">Tools</p>
+                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Tools</p>
                         </div>
                       </div>
                     </div>
                     <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
                       <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pl-0 pr-[91.055px] py-0 relative size-full">
+                        <div className="content-stretch flex flex-col items-start pr-[45%] py-0 relative size-full">
                           <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
                         </div>
                       </div>
@@ -304,10 +304,10 @@ export function AboutMeSection() {
                 </div>
 
                 {/* Bottom Text */}
-                <div className="content-stretch flex flex-col h-[49px] items-start pb-0 pt-[25px] px-0 relative shrink-0 w-full">
+                <div className="content-stretch flex flex-col h-auto items-start pb-0 pt-[25px] px-0 relative shrink-0 w-full">
                   <div aria-hidden="true" className="absolute border-[rgba(29,29,31,0.2)] border-solid border-t inset-0 pointer-events-none" />
-                  <div className="h-[24px] relative shrink-0 w-full">
-                    <p className="absolute css-ew64yg  font-light leading-[24px] left-[619.01px] text-[#fafafa] text-[15px] text-center top-[0.5px] translate-x-[-50%]">Constantly learning and evolving with the latest design tools and methodologies to deliver exceptional user experiences.</p>
+                  <div className="h-auto relative shrink-0 w-full text-center">
+                    <p className="css-ew64yg font-light leading-[24px] text-[#fafafa] text-[15px]">Constantly learning and evolving with the latest design tools and methodologies to deliver exceptional user experiences.</p>
                   </div>
                 </div>
               </motion.div>
