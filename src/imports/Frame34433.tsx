@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import imgAliff2 from "../assets/aliff2.webp";
 import imgRectangle3403 from "../assets/f18628794bce50a197d27b19df5a13f0887e9e6a.webp";
 import imgRectangle3404 from "../assets/24aad8eceb14b95513aa22cc620e658fabcca300.webp";
@@ -196,11 +197,28 @@ function Frame() {
 function Btn1() {
   return (
     <div className="h-[46px] relative rounded-[32px] shrink-0" data-name="btn">
-      <div className="content-stretch flex gap-[40px] h-full items-center justify-center overflow-clip px-[16px] py-[12px] relative rounded-[inherit]">
+      {/* Glowing Blur Layer */}
+      <div className="absolute -inset-[2px] rounded-[32px] bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-yellow-400 opacity-60 blur-md pointer-events-none" />
+
+      {/* Animated Gradient Stroke */}
+      <motion.div
+        className="absolute inset-0 rounded-[32px] pointer-events-none z-20"
+        style={{
+          padding: "2px",
+          background: "conic-gradient(from 0deg, #22d3ee, #d946ef, #facc15, #22d3ee)",
+          WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+          WebkitMaskComposite: "xor",
+          maskComposite: "exclude",
+        }}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+      />
+
+      <div className="content-stretch flex gap-[40px] h-full items-center justify-center overflow-clip px-[16px] py-[12px] relative rounded-[inherit] bg-white/10 backdrop-blur-sm z-10">
         <LiquidEffect className="inset-[-6.5px_-21px]" />
         <p className="css-ew64yg  font-bold leading-[22px] relative shrink-0 text-[#1d1d1f] text-[15px] z-10">UI/UX DESIGNER</p>
       </div>
-      <div aria-hidden="true" className="absolute border-[1.2px] border-[rgba(255,255,255,0.52)] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[0px_12px_16px_0px_rgba(0,0,0,0.12)]" />
+      {/* Removed old static border */}
     </div>
   );
 }
