@@ -11,11 +11,11 @@ interface SkillData {
 
 const skillsData: SkillData[] = [
   { name: "User Research", category: "Research", percentage: 80 },
-  { name: "Wireframing", category: "Design", percentage: 65 },
+  { name: "Wireframing", category: "Design", percentage: 72 },
   { name: "Prototyping", category: "Design", percentage: 75 },
   { name: "Figma", category: "Tools", percentage: 85 },
   { name: "UI Design", category: "Design", percentage: 78 },
-  { name: "UX Strategy", category: "Strategy", percentage: 60 },
+  { name: "UX Strategy", category: "Strategy", percentage: 75 },
   { name: "Usability Testing", category: "Research", percentage: 70 },
   { name: "Adobe XD", category: "Tools", percentage: 55 },
 ];
