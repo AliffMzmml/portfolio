@@ -25,9 +25,13 @@ export function AboutMeSection() {
                     <p className="css-4hzbpn font-bold leading-[normal] relative shrink-0 text-[#fafafa] text-[40px] md:text-[64px] w-full lg:w-[233px]">WHO IS ALIFF</p>
                   </div>
                   <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-[80px] md:w-[108px]">
-                    <div className="flex flex-col font-bold justify-center leading-[0] relative shrink-0 text-[#fafafa] text-[120px] md:text-[180px] w-full">
+                    <motion.div
+                      className="flex flex-col font-bold justify-center leading-[0] relative shrink-0 text-[#fafafa] text-[120px] md:text-[180px] w-full cursor-help"
+                      whileHover={{ rotate: [0, -10, 10, -10, 10, 0] }}
+                      transition={{ duration: 0.6, ease: "easeInOut" }}
+                    >
                       <p className="css-4hzbpn leading-[normal]">?</p>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
 
