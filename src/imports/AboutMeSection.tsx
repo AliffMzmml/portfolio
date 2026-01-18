@@ -1,5 +1,69 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence, animate } from "framer-motion";
+
+// --- Data & Components ---
+
+interface SkillData {
+  name: string;
+  category: string;
+  percentage: number;
+}
+
+const skillsData: SkillData[] = [
+  { name: "Wireframing", category: "Design", percentage: 65 },
+  { name: "Prototyping", category: "Design", percentage: 75 },
+  { name: "Figma", category: "Tools", percentage: 85 },
+  { name: "UI Design", category: "Design", percentage: 78 },
+  { name: "UX Strategy", category: "Strategy", percentage: 60 },
+  { name: "Usability Testing", category: "Research", percentage: 70 },
+  { name: "Adobe XD", category: "Tools", percentage: 55 },
+];
+
+function SkillProgressBar({ name, category, percentage, isExpanded }: { name: string; category: string; percentage: number; isExpanded: boolean }) {
+  const nodeRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    if (isExpanded && nodeRef.current) {
+      const node = nodeRef.current;
+      const controls = animate(0, percentage, {
+        duration: 1.5,
+        ease: "easeOut",
+        onUpdate(value) {
+          node.textContent = `${Math.round(value)}%`;
+        },
+      });
+      return () => controls.stop();
+    } else if (!isExpanded && nodeRef.current) {
+      nodeRef.current.textContent = "0%";
+    }
+  }, [isExpanded, percentage]);
+
+  return (
+    <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
+      <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
+        <div className="h-[22.5px] relative shrink-0 w-auto">
+          <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+            <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">{name}</p>
+          </div>
+        </div>
+        <div className="h-[19.5px] relative shrink-0 w-auto flex gap-2 items-center">
+          <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
+            <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">{category}</p>
+          </div>
+          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[#fafafa] min-w-[30px] text-right" ref={nodeRef}>0%</p>
+        </div>
+      </div>
+      <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full overflow-hidden">
+        <motion.div
+          className="bg-[#fafafa] h-[8px] rounded-[16777200px] absolute top-0 left-0"
+          initial={{ width: "0%" }}
+          animate={{ width: isExpanded ? `${percentage}%` : "0%" }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+        />
+      </div>
+    </div>
+  );
+}
 
 // About Me Section Component with new design from Figma
 export function AboutMeSection() {
@@ -147,180 +211,35 @@ export function AboutMeSection() {
                   {/* Wireframing */}
                   <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
                     <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">Wireframing</p>
-                        </div>
+                      {/* Skills List */}
+                      <div className="flex flex-col gap-[8px] w-full">
+                        {skillsData.map((skill, index) => (
+                          <SkillProgressBar
+                            key={index}
+                            name={skill.name}
+                            category={skill.category}
+                            percentage={skill.percentage}
+                            isExpanded={isSkillsExpanded}
+                          />
+                        ))}
                       </div>
-                      <div className="h-[19.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Design</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
-                      <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pr-[35%] py-0 relative size-full">
-                          <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  {/* Prototyping */}
-                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
-                    <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">Prototyping</p>
-                        </div>
-                      </div>
-                      <div className="h-[19.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Design</p>
-                        </div>
-                      </div>
                     </div>
-                    <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
-                      <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pr-[25%] py-0 relative size-full">
-                          <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  {/* Figma */}
-                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
-                    <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">Figma</p>
-                        </div>
-                      </div>
-                      <div className="h-[19.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Tools</p>
-                        </div>
+                    {/* Bottom Text */}
+                    <div className="content-stretch flex flex-col h-auto items-start pb-0 pt-[25px] px-0 relative shrink-0 w-full">
+                      <div aria-hidden="true" className="absolute border-[rgba(29,29,31,0.2)] border-solid border-t inset-0 pointer-events-none" />
+                      <div className="h-auto relative shrink-0 w-full text-center">
+                        <p className="css-ew64yg font-light leading-[24px] text-[#fafafa] text-[15px]">Constantly learning and evolving with the latest design tools and methodologies to deliver exceptional user experiences.</p>
                       </div>
                     </div>
-                    <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
-                      <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pr-[15%] py-0 relative size-full">
-                          <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* UI Design */}
-                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
-                    <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">UI Design</p>
-                        </div>
-                      </div>
-                      <div className="h-[19.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Design</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
-                      <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pr-[22%] py-0 relative size-full">
-                          <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* UX Strategy */}
-                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
-                    <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">UX Strategy</p>
-                        </div>
-                      </div>
-                      <div className="h-[19.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Strategy</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
-                      <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pr-[40%] py-0 relative size-full">
-                          <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Usability Testing */}
-                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
-                    <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">Usability Testing</p>
-                        </div>
-                      </div>
-                      <div className="h-[19.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Research</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
-                      <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pr-[30%] py-0 relative size-full">
-                          <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Adobe XD */}
-                  <div className="content-stretch css-vsca90 flex flex-col gap-[8px] items-start relative self-stretch shrink-0">
-                    <div className="content-stretch flex h-[22.5px] items-center justify-between relative shrink-0 w-full">
-                      <div className="h-[22.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-semibold leading-[22.5px] text-[#fafafa] text-[15px]">Adobe XD</p>
-                        </div>
-                      </div>
-                      <div className="h-[19.5px] relative shrink-0 w-auto">
-                        <div className="bg-clip-padding border-0 border-[transparent] border-solid relative size-full">
-                          <p className="css-ew64yg font-normal leading-[19.5px] text-[13px] text-[rgba(250,250,250,0.6)]">Tools</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="bg-[rgba(250,250,250,0.1)] h-[8px] relative rounded-[16777200px] shrink-0 w-full">
-                      <div className="overflow-clip rounded-[inherit] size-full">
-                        <div className="content-stretch flex flex-col items-start pr-[45%] py-0 relative size-full">
-                          <div className="bg-[#fafafa] h-[8px] rounded-[16777200px] shrink-0 w-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
+                  </motion.div>
                 </div>
 
-                {/* Bottom Text */}
-                <div className="content-stretch flex flex-col h-auto items-start pb-0 pt-[25px] px-0 relative shrink-0 w-full">
-                  <div aria-hidden="true" className="absolute border-[rgba(29,29,31,0.2)] border-solid border-t inset-0 pointer-events-none" />
-                  <div className="h-auto relative shrink-0 w-full text-center">
-                    <p className="css-ew64yg font-light leading-[24px] text-[#fafafa] text-[15px]">Constantly learning and evolving with the latest design tools and methodologies to deliver exceptional user experiences.</p>
-                  </div>
-                </div>
-              </motion.div>
             </div>
-
           </div>
+          <div aria-hidden="true" className="absolute border-[1.2px] border-[rgba(255,255,255,0.52)] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[0px_12px_16px_0px_rgba(0,0,0,0.12)]" />
         </div>
-        <div aria-hidden="true" className="absolute border-[1.2px] border-[rgba(255,255,255,0.52)] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[0px_12px_16px_0px_rgba(0,0,0,0.12)]" />
-      </div>
-    </div >
-  );
+      </div >
+      );
 }
