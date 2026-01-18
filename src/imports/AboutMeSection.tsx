@@ -80,7 +80,7 @@ export function AboutMeSection() {
           <div className="content-stretch flex flex-[1_0_0] flex-col gap-[40px] items-start min-h-px min-w-px relative w-full">
 
             {/* Top Section - Biography and Education */}
-            <div className="content-stretch flex flex-col lg:flex-row items-center lg:items-start justify-between relative shrink-0 w-full gap-[40px] lg:gap-0">
+            <div className="content-stretch flex flex-col lg:flex-row items-center lg:items-stretch justify-between relative shrink-0 w-full gap-[40px] lg:gap-0">
 
               {/* Left Side - Biography */}
               <div className="content-stretch flex flex-col gap-[40px] items-start relative rounded-[16px] shrink-0 w-full lg:w-auto lg:max-w-[70%]">
