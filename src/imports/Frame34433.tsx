@@ -186,21 +186,8 @@ function Frame3() {
 function Frame() {
   return (
     <div className="absolute content-stretch flex items-center justify-center left-1/2 px-[20px] md:px-[60px] py-[10px] top-[69px] translate-x-[-50%] w-full max-w-[1440px]">
-      <div className="css-g0mm18 flex flex-col font-bold justify-center leading-[0] relative shrink-0 text-[#1d1d1f] w-full">
-        <svg viewBox="0 0 540 65" className="w-full h-auto overflow-visible">
-          <text
-            x="50%"
-            y="50%"
-            dominantBaseline="middle"
-            textAnchor="middle"
-            fill="currentColor"
-            fontWeight="bold"
-            fontSize="62"
-            fontFamily="sans-serif"
-          >
-            ALIFF MZMML
-          </text>
-        </svg>
+      <div className="css-g0mm18 flex flex-col font-bold justify-center leading-[0] relative shrink-0 text-[#1d1d1f] text-[60px] md:text-[100px] lg:text-[185.395px]">
+        <p className="css-ew64yg leading-[normal]">{`ALIFF  MZMML`}</p>
       </div>
     </div>
   );
