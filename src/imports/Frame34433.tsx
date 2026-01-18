@@ -341,8 +341,8 @@ function Frame13() {
       <div
         className="flex gap-[30px] items-center py-[20px]"
         style={{
-          maskImage: 'linear-gradient(to right, transparent 0%, black 200px, black calc(100% - 200px), transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 200px, black calc(100% - 200px), transparent 100%)'
+          maskImage: 'linear-gradient(to right, transparent 0%, black 100px, black calc(100% - 100px), transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 100px, black calc(100% - 100px), transparent 100%)'
         }}
       >
         <style>{`
