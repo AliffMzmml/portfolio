@@ -42,7 +42,7 @@ export function AboutMeSection() {
               </div>
 
               {/* Right Side - Education */}
-              <div className="flex-[1_0_0] h-auto min-h-px min-w-px relative rounded-[16px] w-full lg:w-auto">
+              <div className="flex-none lg:flex-[1_0_0] h-auto min-h-px min-w-px relative rounded-[16px] w-full lg:w-auto">
                 <div className="content-stretch flex flex-col gap-[40px] items-start lg:pl-[80px] lg:pr-[40px] py-0 relative size-full text-[#fafafa]">
                   <p className="css-4hzbpn font-bold leading-[normal] relative shrink-0 text-[32px] w-full">EDUCATION</p>
 
