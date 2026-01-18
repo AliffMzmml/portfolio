@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "motion/react";
 export function AboutMeSection() {
   const [isSkillsExpanded, setIsSkillsExpanded] = useState(false);
   return (
-    <div id="about-me-section" className="content-stretch flex flex-col items-start p-[20px] md:p-[40px] lg:p-[60px] relative w-full">
+    <div id="about-me-section" className="content-stretch flex flex-col items-start p-[20px] md:p-[60px] relative w-full">
       <div className="relative rounded-[32px] shrink-0 w-full max-w-[1320px] mx-auto" data-name="btn">
-        <div className="content-stretch flex gap-[10px] items-center justify-center overflow-clip p-[20px] md:p-[40px] relative rounded-[inherit] w-full">
+        <div className="content-stretch flex gap-[10px] items-center justify-center overflow-clip p-[20px] md:p-[60px] relative rounded-[inherit] w-full">
           {/* Liquid Effect */}
           <div className="absolute backdrop-blur-[1.5px] bg-[rgba(255,255,255,0.12)] inset-[-6.5px_-21px]" data-name="liquid-effect" />
 
