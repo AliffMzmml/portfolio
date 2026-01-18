@@ -206,8 +206,9 @@ export function AboutMeSection() {
               </motion.div>
             </div>
           </div>
-          <div aria-hidden="true" className="absolute border-[1.2px] border-[rgba(255,255,255,0.52)] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[0px_12px_16px_0px_rgba(0,0,0,0.12)]" />
         </div>
-      </div >
-      );
+        <div aria-hidden="true" className="absolute border-[1.2px] border-[rgba(255,255,255,0.52)] border-solid inset-0 pointer-events-none rounded-[32px] shadow-[0px_12px_16px_0px_rgba(0,0,0,0.12)]" />
+      </div>
+    </div>
+  );
 }
