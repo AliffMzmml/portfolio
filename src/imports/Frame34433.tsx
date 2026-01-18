@@ -597,13 +597,7 @@ export default function Frame20() {
     <div className="content-stretch flex flex-col items-start relative w-full min-h-screen">
       <style>{`
         .wavy-gradient-bg {
-          background: 
-            linear-gradient(to bottom, rgba(250, 250, 250, 0) 0%, rgba(50, 50, 50, 0.4) 60%, rgba(30, 30, 30, 0.6) 100%),
-            radial-gradient(circle at 20% 50%, rgba(230, 230, 230, 1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 50%, rgba(180, 180, 180, 0.8) 0%, transparent 50%),
-            radial-gradient(circle at 50% 80%, rgba(140, 140, 140, 0.7) 0%, transparent 50%),
-            linear-gradient(135deg, #d4d4d4 0%, #8a8a8a 50%, #6b6b6b 100%);
-          background-size: 100% 100%, 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+          background: linear-gradient(to bottom, #D8D7D7 20%, #4A4A4A 50%, #1D1D1F 100%);
         }
       `}</style>
       <div className="wavy-gradient-bg absolute inset-0 w-full h-full min-h-full -z-10" />
